@@ -141,24 +141,8 @@ export default function ReactNativeTurnstile(props: TurnstileProps) {
 	// Build URL and query parameters
 	const params = new URLSearchParams();
 
-	if (sitekey) params.append('sitekey', sitekey);
-	if (action) params.append('action', action);
-	if (cData) params.append('cData', cData);
-	if (theme) params.append('theme', theme);
-	if (language) params.append('language', language);
-	if (tabIndex) params.append('tabIndex', tabIndex.toString());
-	if (responseField) params.append('responseField', responseField.toString());
-	if (responseFieldName) params.append('responseFieldName', responseFieldName);
-	if (size) params.append('size', size);
-	if (fixedSize) params.append('fixedSize', fixedSize.toString());
-	if (retry) params.append('retry', retry);
-	if (retryInterval) params.append('retryInterval', retryInterval.toString());
-	if (refreshExpired) params.append('refreshExpired', refreshExpired);
-	if (appearance) params.append('appearance', appearance);
-	if (execution) params.append('execution', execution);
-	if (id) params.append('id', id);
 
-	const url = `${PUBLIC_DOMAIN}/turnstile?${params.toString()}`;
+	const url = 'https://mobileapi.happycasino.se'
 
 	const dimensions = turnstileDimensions[size || 'normal'];
 
